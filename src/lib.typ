@@ -1,4 +1,15 @@
-// Convert an int string to Chinese number
+// Convert an int to Chinese number, for ex: 2024 become "二〇二四"
+#let int-to-cn-simple-num(n) = {
+  let digits = ("〇", "一", "二", "三", "四", "五", "六", "七", "八", "九")
+  let s = str(n)
+  let result = ""
+  for c in s.codepoints() {
+    result += digits.at(int(c))
+  }
+  return result
+}
+
+// Convert an int string to Chinese number, for ex: "2024" become "二千零二十四"
 #let str-to-cn-num(s) = {
   let digits = ("零", "一", "二", "三", "四", "五", "六", "七", "八", "九")
   let units = ("", "十", "百", "千", "万", "十", "百", "千", "亿", "十", "百", "千")
@@ -28,13 +39,13 @@
   return result
 }
 
-// Convert an int to Chinese number
+// Convert an int to Chinese number, for ex: 2024 become "二千零二十四"
 #let int-to-cn-num(n) = {
   let s = str(n)
   return str-to-cn-num(s)
 }
 
-// Convert an int string to Chinese ancient number
+// Convert an int string to Chinese ancient number, for ex: "2024" become "贰仟零贰拾肆"
 #let str-to-cn-ancient-num(s) = {
   let digits = ("零", "壹", "贰", "叁", "肆", "伍", "陆", "柒", "捌", "玖")
   let units = ("", "拾", "佰", "仟", "万", "拾", "佰", "仟", "亿", "拾", "佰", "仟")
@@ -64,13 +75,13 @@
   return result
 }
 
-// Convert an int to Chinese ancient number
+// Convert an int to Chinese ancient number, for ex: 2024 become "贰仟零贰拾肆"
 #let int-to-cn-ancient-num(n) = {
   let s = str(n)
   return str-to-cn-ancient-num(s)
 }
 
-// Convert a number to Chinese currency
+// Convert a number to Chinese currency, for ex: 1234.56 become "壹仟贰佰叁拾肆元伍角陆分"
 #let num-to-cn-currency(n) = {
   let digits = ("零", "壹", "贰", "叁", "肆", "伍", "陆", "柒", "捌", "玖")
   let units = ("角", "分")

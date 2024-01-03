@@ -1,8 +1,12 @@
-#import "lib.typ": int-to-cn-num, int-to-cn-ancient-num, num-to-cn-currency
+#import "lib.typ": int-to-cn-num, int-to-cn-ancient-num, int-to-cn-simple-num, num-to-cn-currency
 
 #set heading(numbering: "1.1")
 
 = CN-NUM 示例
+
+== int-to-cn-simple-num
+
+#int-to-cn-simple-num(2024)
 
 == int-to-cn-num 0-999
 
@@ -15,6 +19,8 @@
 }
 
 == others
+
+#int-to-cn-num(2024)
 
 #int-to-cn-num(987654321)
 
@@ -99,6 +105,8 @@
 #int-to-cn-num(900000000)
 
 == int-to-cn-ancient-num
+
+#int-to-cn-ancient-num(2024)
 
 #{
   let i = 0;
