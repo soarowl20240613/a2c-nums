@@ -123,3 +123,5 @@
 #num-to-cn-currency(0.5678)
 
 #num-to-cn-currency(1203405602.5678)
+
+#num-to-cn-currency(234)
