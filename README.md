@@ -28,7 +28,7 @@ Convert an integer to ancient Chinese number. ex: `#int-to-cn-ancient-num(123)` 
 
 ### int-to-cn-simple-num
 
-Convert an integer to simpple Chinese number. ex: `#int-to-cn-simple-num(2024)` will be `二〇二四`
+Convert an integer to simple Chinese number. ex: `#int-to-cn-simple-num(2024)` will be `二〇二四`
 
 ### num-to-cn-currency
 
