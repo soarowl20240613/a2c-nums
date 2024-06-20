@@ -4,7 +4,7 @@ version = "0.0.1"
 authors = ["Zhuo Nengwen <soarowl@yeah.net>"]
 license = "MIT"
 description = "Convert a number to Chinese"
-repository = "https://github.com/soarowl/a2c-nums.git"
+repository = "https://github.com/soarowl20240613/a2c-nums"
 
 keywords = ["Converter", "number", "Chinese", "Currency"]
 
